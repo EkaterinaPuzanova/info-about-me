@@ -70,12 +70,17 @@ a {
   transition: all 0.3s ease;
 }
 
-.education ul li {
+.education li,
+.about-me li {
   padding-left: calc(13px + 0.7vw);
   background-image: url(assets/images/marker.svg);
   background-position: 0 center;
   background-size: calc(5px + 0.7vw) calc(5px + 0.7vw);
   background-repeat: no-repeat;
+}
+
+.about-me li {
+  background-image: url(assets/images/point.svg);
 }
 
 .title {
@@ -224,6 +229,10 @@ a {
   color: var(--color-certificat);
 }
 
+.main-color {
+  color: var(--color-main);
+}
+
 .separator {
   width: 50%;
   height: 3px;
@@ -247,7 +256,7 @@ a {
 } */
 
 .info,
-.det__item{
+.item {
   /* width: 500px; */
   font-family: 'Open-sans';
   font-size: 20px;
