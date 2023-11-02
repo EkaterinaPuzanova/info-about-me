@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'Open-sans';
-	src: url('assets/fonts/open-sans-condensed-light-italic.woff2'),
-        url('./assets/fonts/open-sans-condensed-light-italic.woff');
+	src: url('assets/fonts/open-sans-condensed-light-italic.woff2') format('woff2'),
+        url('./assets/fonts/open-sans-condensed-light-italic.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
 	font-family: 'Playfair-Display';
-	src: url('assets/fonts/playfairDisplay.woff2'),
-        url('./assets/fonts/playfairDisplay.woff');
+	src: url('assets/fonts/playfairDisplay.woff2') format('woff2'),
+        url('./assets/fonts/playfairDisplay.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
   font-display: swap;
@@ -21,7 +21,6 @@
   --color-light: rgb(255, 255, 255);
   --color-dark: rgb(0, 0, 0);
   --color-main-dark: rgb(92, 9, 122);
-  /* --color-background: rgb(210, 210, 212); */
   --color-letters-main: rgb(165, 165, 165);
   --color-letters1: rgb(123, 122, 122);
   --color-letters2: rgb(0, 0, 0);
@@ -187,7 +186,6 @@ a {
   height: 3px;
   background-color: var(--color-main);
   margin: 0 auto;
- 
   border-radius: 50%;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
 }
@@ -245,7 +243,8 @@ a {
 .petal {
   position: absolute;
   width: calc(2 * 3.1415 * var(--size-core) / 10);
-  height:var(--size-petal);
+  height: var(--size-petal);
+  min-height: 60px;
   background-color: white;
   border-radius: 50% 50% 25% 25%;
   transform-origin: calc(2 * 3.1415 * var(--size-core) / 10 / 2) calc(var(--size-petal) + var(--size-core) / 2);
@@ -393,9 +392,22 @@ a {
 }
 
 @media screen and (max-width: 688px) {
+  :root {  
+    --size-core: 7vw;
+  }
+
   .header__icon-wrapper {
     width: 22vw;
     min-width: 100px;
+  }
+
+  .core p {
+    margin-top: calc(var(--size-core) / 2 - 1.3vw);
+  }
+
+  .footer img {
+    width: 7vw;
+    height: 7vw;
   }
 }
 
