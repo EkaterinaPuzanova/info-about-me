@@ -393,16 +393,20 @@ a {
 
 @media screen and (max-width: 688px) {
   :root {  
-    --size-core: 7vw;
+    --size-core: 8.5vw;
+  }
+
+  .header__container {
+    height: 72vw;
   }
 
   .header__icon-wrapper {
-    width: 22vw;
-    min-width: 100px;
+    width: 32vw;
+    min-width: 120px;
   }
 
   .core p {
-    margin-top: calc(var(--size-core) / 2 - 1.3vw);
+    margin-top: calc(var(--size-core) / 2 - 1.5vw);
   }
 
   .footer img {
