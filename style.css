@@ -110,12 +110,12 @@ a {
 }
 
 .header__container {
-  height: 30vw;
   display: flex;
   gap: 70px;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: calc(5vw - 20px);
   padding-bottom: 70px;
+
 }
 
 
@@ -157,8 +157,13 @@ a {
   box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
 }
 
+
 .header__icon-img {
   animation: img-background 3s infinite alternate;
+}
+
+main {
+  margin-top: 5vw;
 }
 
 .education__container,
@@ -367,7 +372,7 @@ a {
   }
 
   .header__container {
-    height: 60vw;
+    
     min-height: 276px;
     flex-direction: column;
     gap: 20px;
@@ -398,10 +403,11 @@ a {
 
   .header__container {
     height: 72vw;
+    padding-bottom: 23px;
   }
 
   .header__icon-wrapper {
-    width: 32vw;
+    width: 25vw;
     min-width: 120px;
   }
 
